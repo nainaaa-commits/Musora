@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-musora-orange: #FF9500;
+  --color-musora-dark: #121417;
+  --color-musora-gray: #F3F4F6;
+  
+  --font-heading: "Inter", sans-serif;
+}
