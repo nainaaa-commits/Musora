@@ -23,9 +23,13 @@ function App() {
   const nextStep = () => setStep((s) => s + 1);
 
   // Validation Logic for the shared button
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
   const isInstrumentDisabled = !selections.instrument;
   const isGenreDisabled = selections.genres.length === 0;
-  const isEmailDisabled = !selections.email.includes("@");
+  const isEmailDisabled = !validateEmail(selections.email);
 
   return (
     <main className="flex-1 font-sans">
@@ -86,7 +90,11 @@ function App() {
             </p>
           }
         >
-          <EmailStep selections={selections} setSelections={setSelections} />
+          <EmailStep
+            selections={selections}
+            setSelections={setSelections}
+            showError={selections.email.length > 0 && isEmailDisabled}
+          />
         </StepLayout>
       )}
 

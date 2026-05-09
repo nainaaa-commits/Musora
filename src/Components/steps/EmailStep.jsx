@@ -1,4 +1,4 @@
-export default function EmailStep({ selections, setSelections }) {
+export default function EmailStep({ selections, setSelections, showError }) {
   const handleToggle = () => {
     setSelections({
       ...selections,
@@ -9,24 +9,33 @@ export default function EmailStep({ selections, setSelections }) {
   return (
     <div className="w-full flex flex-col gap-6 animate-in fade-in duration-500">
       {/* Email Input Group */}
-      <div className="w-full flex flex-col items-start gap-2">
+      <div className="w-full flex flex-col items-start gap-2 relative">
+        {" "}
         <label
           htmlFor="email-input"
-          className="text-gray-500 text-[11px] font-sans font-bold uppercase tracking-[0.1em] ml-1"
+          className="text-gray-500 text-[11px] font-sans font-bold uppercase tracking-wider ml-1"
         >
           Email
         </label>
-
         <input
           id="email-input"
           type="email"
-          placeholder="email@musora.com"
+          placeholder="Enter your email..."
           value={selections.email}
           onChange={(e) =>
             setSelections({ ...selections, email: e.target.value })
           }
-          className="w-full px-6 py-4 rounded-xl border-2 border-musora-gray focus:border-musora-orange outline-none font-sans font-bold text-lg transition-all placeholder:text-gray-200"
+          className={`w-full p-4 rounded-xl border-2 transition-all outline-none ${
+            showError
+              ? "border-red-500 focus:border-red-500"
+              : "border-gray-200 focus:border-musora-dark"
+          }`}
         />
+        {showError && (
+          <p className="text-red-500 text-sm font-bold tracking-tight ml-1 mt-1 w-full text-left">
+            Please enter a valid email address
+          </p>
+        )}
       </div>
 
       {/* Optional Marketing Consent */}
