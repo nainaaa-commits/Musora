@@ -5,9 +5,9 @@ import voice from "../assets/voice.png";
 import bass from "../assets/bass.png";
 
 export const instruments = [
+  { id: "drums", name: "DRUMS", icon: drums },
   { id: "piano", name: "PIANO", icon: piano },
   { id: "guitar", name: "GUITAR", icon: guitar },
-  { id: "drums", name: "DRUMS", icon: drums },
-  { id: "voice", name: "Voice", icon: voice },
   { id: "bass", name: "BASS", icon: bass },
+  { id: "voice", name: "Voice", icon: voice },
 ];
