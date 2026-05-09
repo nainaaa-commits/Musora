@@ -8,25 +8,32 @@ export default function EmailStep({ selections, setSelections }) {
 
   return (
     <div className="w-full flex flex-col gap-6 animate-in fade-in duration-500">
-      {/* Email Input */}
-      <div className="w-full">
+      {/* Email Input Group */}
+      <div className="w-full flex flex-col items-start gap-2">
+        <label
+          htmlFor="email-input"
+          className="text-gray-500 text-[11px] font-sans font-bold uppercase tracking-[0.1em] ml-1"
+        >
+          Email
+        </label>
+
         <input
+          id="email-input"
           type="email"
           placeholder="email@musora.com"
           value={selections.email}
           onChange={(e) =>
             setSelections({ ...selections, email: e.target.value })
           }
-          className="w-full px-6 py-4 rounded-xl border-2 border-musora-gray focus:border-musora-orange outline-none font-sans font-bold text-lg transition-all placeholder:text-gray-300"
+          className="w-full px-6 py-4 rounded-xl border-2 border-musora-gray focus:border-musora-orange outline-none font-sans font-bold text-lg transition-all placeholder:text-gray-200"
         />
       </div>
 
-      {/* Optional Marketing Consent Section */}
+      {/* Optional Marketing Consent */}
       <div
         className="flex items-center gap-3 text-left cursor-pointer group select-none"
         onClick={handleToggle}
       >
-        {/* Checkbox Container */}
         <div
           className={`min-w-[20px] h-5 w-5 rounded border-2 flex items-center justify-center transition-all duration-200 ${
             selections.marketingConsent
@@ -51,8 +58,7 @@ export default function EmailStep({ selections, setSelections }) {
           )}
         </div>
 
-        {/* Marketing Text */}
-        <p className="text-gray-500 text-[11px] font-sans font-bold uppercase tracking-[0.05em] leading-none">
+        <p className="text-gray-500 text-xs font-sans tracking-wider leading-none">
           Send me tips, free lessons and special offers by email
         </p>
       </div>
