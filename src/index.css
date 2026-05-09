@@ -1,9 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-musora-orange: #FF9500;
+  --color-musora-orange: #FFAE00;
   --color-musora-dark: #121417;
   --color-musora-gray: #F3F4F6;
+  --color-musora-yellow: #FFAE00;
+  --color-musora-primary: #0C1524;
   
-  --font-heading: "Inter", sans-serif;
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+
+  /* Custom Transitions & Scaling for Buttons */
+  --transition-property-standard: all;
+  --transition-duration-standard: 300ms;
 }
