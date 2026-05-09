@@ -12,9 +12,17 @@ A high-fidelity, responsive onboarding experience built with React, Tailwind CSS
 
 **Refined UX/UI**: Integrated Montserrat and Inter typography for brand alignment, featuring custom-built accessible inputs and a non-mandatory marketing consent flow.
 
+🛠 **Future Improvements & Roadmap**
+The following features are planned for the next phase:
+
+**Unit Testing**: Implement Jest for core utility functions (like email validation logic).
+
+**E2E Testing**: Add Cypress flows to ensure the multi-step onboarding remains break-proof during styling updates.
+
 
 
 🚀 Getting Started
+
 npm install
 
 npm run dev
