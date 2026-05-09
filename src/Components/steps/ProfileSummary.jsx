@@ -1,7 +1,7 @@
 export default function ProfileSummary({ selections }) {
   return (
     <div className="w-full bg-musora-gray/30 rounded-2xl p-8 text-left">
-      <div className="grid grid-cols-2 gap-y-8 gap-x-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full px-4">
         {/* Instrument */}
         <div>
           <p className="text-gray-400 text-xs  tracking-tight mb-1">
