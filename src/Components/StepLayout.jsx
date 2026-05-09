@@ -35,8 +35,8 @@ export default function StepLayout({
           hasImage ? "w-full lg:w-3/4" : "w-full"
         }`}
       >
-        {/* Centered Content Area */}
-        <div className="flex-1 flex flex-col items-center justify-center p-8 lg:p-20">
+        {/* Main Content Area */}
+        <div className="flex-1 flex flex-col items-center justify-start pt-12 pb-24 lg:justify-center p-8 lg:p-20 overflow-y-auto">
           <div
             className={`w-full flex flex-col items-center text-center ${
               hasImage ? "max-w-[580px]" : "max-w-[640px]"
@@ -82,7 +82,7 @@ export default function StepLayout({
           </div>
         </div>
 
-        {/* FOOTER */}
+        {/* FOOTER - Stays at bottom */}
         {footer && (
           <footer className="w-full pb-8 px-8 text-center">{footer}</footer>
         )}

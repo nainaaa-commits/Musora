@@ -3,7 +3,7 @@ import { instruments } from "../../data/instruments";
 export default function InstrumentStep({ selections, setSelections }) {
   return (
     <>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10 w-full">
+      <div className="grid grid-cols-3 lg:grid-cols-5 gap-3 mb-10 w-full">
         {instruments.map((inst) => (
           <button
             key={inst.id}
